@@ -10,4 +10,8 @@ public class Ware {
 		this.beschreibung = beschreibung;
 	}
 	
+	public String getTitel(){
+		return titel;
+	}
+	
 }

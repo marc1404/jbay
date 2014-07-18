@@ -4,7 +4,7 @@ import java.util.Calendar;
 
 public class Auktion {
 
-	private static final double increment = 1;
+	public static final double increment = 1;
 	
 	private Ware ware;
 	private Gebot gebot = null;
@@ -16,6 +16,18 @@ public class Auktion {
 		this.ende = Calendar.getInstance();
 		
 		this.ende.setTimeInMillis(System.currentTimeMillis() + 60000 * dauer);
+	}
+	
+	public Ware getWare(){
+		return ware;
+	}
+	
+	public double getPreis(){
+		return preis;
+	}
+	
+	public Gebot getGebot(){
+		return gebot;
 	}
 	
 	public boolean gebotAbgeben(Gebot g){
