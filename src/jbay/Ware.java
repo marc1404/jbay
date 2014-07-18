@@ -3,7 +3,6 @@ package jbay;
 public class Ware {
 
 	private String titel;
-	@SuppressWarnings("unused")
 	private String beschreibung;
 	
 	public Ware(String titel, String beschreibung){
@@ -13,6 +12,10 @@ public class Ware {
 	
 	public String getTitel(){
 		return titel;
+	}
+	
+	public String getBeschreibung(){
+		return beschreibung;
 	}
 	
 }
