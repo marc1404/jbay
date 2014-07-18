@@ -32,20 +32,7 @@ public class BieterTerminal {
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
 		
-		new Thread(){
-			@Override
-			public void run(){
-				while(!Thread.interrupted()){
-					updateTime();
-					
-					try{
-						sleep(1000);
-					}catch(Exception ex){
-						ex.printStackTrace();
-					}
-				}
-			}
-		}.start();
+		startTimeThread();
 	}
 	
 	public void updateTerminal(){
@@ -67,8 +54,23 @@ public class BieterTerminal {
 		frame.pack();
 	}
 	
-	private void updateTime(){
-		timeLabel.setText(Calendar.getInstance().getTime().toString());
+	private void startTimeThread(){
+		Runnable task = new Runnable(){
+			@Override
+			public void run(){
+				while(!Thread.interrupted()){
+					timeLabel.setText(Calendar.getInstance().getTime().toString());
+					
+					try{
+						Thread.sleep(1000);
+					}catch(Exception ex){
+						ex.printStackTrace();
+					}
+				}
+			}
+		};
+		
+		new Thread(task).start();
 	}
 	
 }

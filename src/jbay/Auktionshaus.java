@@ -53,6 +53,7 @@ public class Auktionshaus {
 		try{
 			log.write(message);
 			log.newLine();
+			log.flush();
 		}catch(Exception ex){
 			ex.printStackTrace();
 		}

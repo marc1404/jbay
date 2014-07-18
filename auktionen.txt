@@ -1,0 +1,4 @@
+[Fri Jul 18 11:40:14 CEST 2014] Gebot von Donald Duck für Turnschuhe: 1.0
+[Fri Jul 18 11:40:16 CEST 2014] Gebot von Micky Maus für iPad: 1.0
+[Fri Jul 18 11:40:18 CEST 2014] Gebot von Donald Duck für Currywurst: 1.0
+[Fri Jul 18 11:40:20 CEST 2014] Gebot von Micky Maus für iPad: 2.0
