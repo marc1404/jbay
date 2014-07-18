@@ -30,6 +30,10 @@ public class Auktion {
 		return gebot;
 	}
 	
+	public Calendar getEnde(){
+		return ende;
+	}
+	
 	public boolean gebotAbgeben(Gebot g){
 		double betrag = g.getBetrag();
 		double incPreis = preis + increment;
